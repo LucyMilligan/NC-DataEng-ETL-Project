@@ -40,15 +40,12 @@ jobs:
     steps:
       - name: checkout and clone repo
         uses: actions/checkout@v4
-
       - name: setup Python
         uses: actions/setup-python@v5
         with: 
           python-version: '3.12.7'
-      
       - name: Create environment
         uses: make requirements 
-
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
